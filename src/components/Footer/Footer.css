@@ -1,0 +1,86 @@
+.footer {
+  background-color: #1a1a1a; /* Fundo mais escuro */
+  color: #f4f4f4;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+  margin-top: 30PX;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #eaf0f3; /* Azul vibrante */
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #00baff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffcc00; /* Amarelo no hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom a {
+  color: #eff6f8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #ffcc00; /* Amarelo no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}

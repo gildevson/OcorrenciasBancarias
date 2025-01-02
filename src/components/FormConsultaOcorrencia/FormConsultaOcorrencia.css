@@ -1,0 +1,96 @@
+.form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Espaçamento mais consistente */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Melhor contraste */
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 12px; /* Mais confortável para interações */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease; /* Transição suave para hover e focus */
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  ::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #003f87;
+    transform: translateY(0);
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .form-section {
+      padding: 15px;
+      border-radius: 5px;
+    }
+  
+    input,
+    select,
+    button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    label {
+      font-size: 14px;
+    }
+  
+    input,
+    select,
+    button {
+      font-size: 13px;
+      padding: 8px;
+    }
+  }
+  
