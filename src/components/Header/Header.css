@@ -1,63 +1,149 @@
+/* HEADER */
 .header {
   background-color: #002B49; /* Azul escuro */
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-content {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 }
 
 .header-logo {
-  width: 80%; /* Aumenta o tamanho */
-  max-width: 400px; /* Limite máximo ajustado */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 200px; /* Ajusta tamanho da logo */
+  height: auto;
   object-fit: contain;
 }
 
 .header-nav {
-  background-color: #001f3f; /* Tom mais escuro */
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre botões */
+  margin-top: 10px;
 }
 
 .header-nav-list {
-  display: flex;
-  justify-content: center;
-  gap: 36px; /* Espaçamento entre os itens */
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Ajusta espaçamento entre os itens */
 }
 
 .header-nav-link {
+  background-color: #007bff; /* Azul padrão dos botões */
   color: #ffffff; /* Cor do texto */
-  text-decoration: none; /* Remove o sublinhado */
-  font-size: 18px; /* Tamanho ajustado para maior legibilidade */
-  font-weight: bold; /* Negrito para destaque */
-  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px; /* Ajusta tamanho do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
 .header-nav-link:hover {
-  color: #00baff; /* Cor de destaque ao passar o mouse */
+  background-color: #0056b3; /* Azul mais escuro no hover */
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+.header-nav-link:active {
+  transform: translateY(1px); /* Efeito de clique */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .header-logo {
-    width: 90%; /* Aumenta ainda mais em telas menores */
-    max-width: 300px; /* Ajusta o limite em telas pequenas */
-  }
-
-  .header-nav-list {
-    flex-direction: column; /* Empilha os links em dispositivos móveis */
-    gap: 15px; /* Espaçamento vertical entre os itens */
+  .header-nav {
+    flex-direction: column; /* Empilha os botões em telas menores */
+    gap: 10px;
   }
 
   .header-nav-link {
-    font-size: 16px; /* Tamanho menor para caber bem */
+    font-size: 14px; /* Ajusta o tamanho dos botões */
+    padding: 8px 15px; /* Reduz o preenchimento */
   }
+}
+
+.overlay-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.overlay-content ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.overlay-close {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.overlay-close:hover {
+  background-color: #5a6268;
+}
+
+/* Tabela */
+.command-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.command-table th,
+.command-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.command-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.command-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.command-table tr:hover {
+  background-color: #f1f1f1;
 }
