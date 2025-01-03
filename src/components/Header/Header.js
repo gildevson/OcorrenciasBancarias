@@ -44,6 +44,146 @@ const Header = () => {
                   </td>
                 </tr>
                 <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
                   <td>Bradesco</td>
                   <td>237</td>
                   <td>CNAB 400</td>
@@ -78,6 +218,20 @@ const Header = () => {
                   <td>
                     <a
                       href="https://example.com/santander-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

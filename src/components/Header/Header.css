@@ -16,9 +16,11 @@
 }
 
 .header-logo {
-  max-width: 200px; /* Ajusta tamanho da logo */
-  height: auto;
-  object-fit: contain;
+  max-width: 350px; /* Ajusta o tamanho máximo da logo */
+  height: auto; /* Mantém a proporção */
+  object-fit: contain; /* Garante que a logo não será cortada */
+  margin-bottom: 10px; /* Adiciona um pequeno espaçamento abaixo */
+  transition: transform 0.3s ease; /* Adiciona uma transição para hover */
 }
 
 .header-nav {
@@ -147,3 +149,4 @@
 .command-table tr:hover {
   background-color: #f1f1f1;
 }
+
