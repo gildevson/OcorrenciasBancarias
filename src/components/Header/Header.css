@@ -3,7 +3,7 @@
   background-color: #002B49; /* Azul escuro */
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,21 +12,26 @@
 .header-content {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .header-logo {
-  max-width: 350px; /* Ajusta o tamanho máximo da logo */
+  max-width: 250px; /* Tamanho mais equilibrado */
   height: auto; /* Mantém a proporção */
-  object-fit: contain; /* Garante que a logo não será cortada */
-  margin-bottom: 10px; /* Adiciona um pequeno espaçamento abaixo */
-  transition: transform 0.3s ease; /* Adiciona uma transição para hover */
+  object-fit: contain; /* Evita distorções */
+  margin-bottom: 10px; /* Espaço abaixo */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para hover */
+}
+
+.header-logo:hover {
+  transform: scale(1.05); /* Leve aumento no hover */
+  opacity: 0.9; /* Suaviza o brilho */
 }
 
 .header-nav {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Espaçamento entre botões */
+  gap: 20px; /* Espaçamento maior entre botões */
   margin-top: 10px;
 }
 
@@ -35,64 +40,53 @@
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px; /* Ajusta espaçamento entre os itens */
+  gap: 25px; /* Ajusta espaçamento entre os itens */
 }
 
 .header-nav-link {
-  background-color: #007bff; /* Azul padrão dos botões */
-  color: #ffffff; /* Cor do texto */
+  background-color: #007bff; /* Azul vibrante */
+  color: #ffffff; /* Texto branco */
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 20px; /* Ajusta tamanho do botão */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  padding: 12px 25px; /* Botões mais confortáveis */
+  border-radius: 8px; /* Bordas arredondadas mais suaves */
+  transition: all 0.3s ease; /* Suaviza todas as transições */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .header-nav-link:hover {
   background-color: #0056b3; /* Azul mais escuro no hover */
-  transform: translateY(-3px); /* Efeito de elevação */
+  transform: translateY(-3px); /* Leve elevação */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
 }
 
 .header-nav-link:active {
-  transform: translateY(1px); /* Efeito de clique */
+  transform: translateY(1px); /* Pressionado */
+  background-color: #004080; /* Azul ainda mais escuro */
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   .header-nav {
-    flex-direction: column; /* Empilha os botões em telas menores */
-    gap: 10px;
+    flex-direction: column; /* Empilha os botões */
+    gap: 15px;
   }
 
   .header-nav-link {
-    font-size: 14px; /* Ajusta o tamanho dos botões */
-    padding: 8px 15px; /* Reduz o preenchimento */
+    font-size: 14px; /* Reduz o tamanho dos botões */
+    padding: 10px 20px; /* Botões mais compactos */
   }
 }
 
-.overlay-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.overlay-content ul li {
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #333;
-}
-
-
-/* Overlay */
+/* OVERLAY */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6); /* Fundo mais escuro */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,12 +94,12 @@
 }
 
 .overlay-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 25px; /* Maior espaçamento interno */
+  border-radius: 12px; /* Bordas mais suaves */
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 650px; /* Largura máxima */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
   text-align: center;
 }
 
@@ -113,17 +107,19 @@
   background-color: #6c757d;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 25px;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .overlay-close:hover {
-  background-color: #5a6268;
+  background-color: #5a6268; /* Mais escuro no hover */
 }
 
-/* Tabela */
+/* TABELA */
 .command-table {
   width: 100%;
   border-collapse: collapse;
@@ -133,20 +129,38 @@
 .command-table th,
 .command-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px 15px; /* Maior espaçamento */
   text-align: left;
 }
 
 .command-table th {
   background-color: #f2f2f2;
   font-weight: bold;
+  font-size: 16px; /* Títulos mais destacados */
 }
 
 .command-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Listrado alternado */
 }
 
 .command-table tr:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Destaque ao passar o mouse */
 }
 
+.command-table a {
+  color: #007bff; /* Link azul padrão */
+  text-decoration: none;
+}
+
+.command-table a:hover {
+  text-decoration: underline;
+}
+
+/* MELHORIAS PARA MOBILE */
+@media (max-width: 768px) {
+  .command-table th,
+  .command-table td {
+    padding: 8px; /* Espaçamento reduzido */
+    font-size: 14px; /* Texto menor */
+  }
+}
