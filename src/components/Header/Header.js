@@ -18,50 +18,72 @@ const Header = () => {
       case "Início":
         return (
           <div>
-            <h2>Comandos Bancários</h2>
+            <h2>Layout Bancarios</h2>
             <table className="command-table">
               <thead>
                 <tr>
+                  <th>NOME DO BANCO</th>
                   <th>NÚMERO</th>
-                  <th>DESCRIÇÃO</th>
+                  <th>TIPO DE CNAB</th>
+                  <th>LAYOUT</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>02</td>
-                  <td>Solicitar Baixa</td>
+                  <td>Banco do Brasil</td>
+                  <td>001</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/banco-brasil-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>04</td>
-                  <td>Conceder Abatimento</td>
+                  <td>Bradesco</td>
+                  <td>237</td>
+                  <td>CNAB 400</td>
+                  <td>
+                    <a
+                      href="https://example.com/bradesco-cnab400.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>05</td>
-                  <td>Cancelar Abatimento</td>
+                  <td>Itaú</td>
+                  <td>341</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/itau-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
                 </tr>
                 <tr>
-                  <td>06</td>
-                  <td>Prorrogar Documento</td>
-                </tr>
-                <tr>
-                  <td>09</td>
-                  <td>Protestar Documento</td>
-                </tr>
-                <tr>
-                  <td>19</td>
-                  <td>Sustar Protesto</td>
-                </tr>
-                <tr>
-                  <td>23</td>
-                  <td>Alterar Carteira</td>
-                </tr>
-                <tr>
-                  <td>31</td>
-                  <td>Cancelar Protesto</td>
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td>Sustar Protesto/Baixar</td>
+                  <td>Santander</td>
+                  <td>033</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://example.com/santander-cnab240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -98,7 +120,7 @@ const Header = () => {
               className="header-nav-link"
               onClick={() => handleNavClick("Início")}
             >
-              Início
+              Layout Bancarios
             </button>
           </li>
           <li>
