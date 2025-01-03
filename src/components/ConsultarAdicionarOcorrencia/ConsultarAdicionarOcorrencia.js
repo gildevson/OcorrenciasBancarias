@@ -46,7 +46,7 @@ const ConsultarAdicionarOcorrencia = () => {
     try {
       const chave = `${codigoConsulta}-${motivoConsulta}`;
       const response = await fetch(
-        `http://localhost:5000/consultar-ocorrencia?banco=${bancoConsulta}&chave=${chave}`
+        `https://ocorrencias-bancarias-backend.vercel.app/consultar-ocorrencia?banco=${bancoConsulta}&chave=${chave}`
       );
 
       if (!response.ok) {
@@ -68,7 +68,7 @@ const ConsultarAdicionarOcorrencia = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/todas-ocorrencias?banco=${bancoConsulta}`
+        `https://ocorrencias-bancarias-backend.vercel.app/todas-ocorrencias?banco=${bancoConsulta}`
       );
       if (!response.ok) {
         throw new Error("Erro ao carregar todas as ocorrências.");
@@ -97,7 +97,7 @@ const ConsultarAdicionarOcorrencia = () => {
     setLoading(true);
     try {
       const chave = `${codigoAdicionar}-${motivoAdicionar}`;
-      const response = await fetch("http://localhost:5000/adicionar-ocorrencia", {
+      const response = await fetch("https://ocorrencias-bancarias-backend.vercel.app/adicionar-ocorrencia", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -130,7 +130,7 @@ const ConsultarAdicionarOcorrencia = () => {
   const carregarComandos = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/comandos");
+      const response = await fetch("https://ocorrencias-bancarias-backend.vercel.app/comandos");
       if (!response.ok) {
         throw new Error("Erro ao carregar comandos bancários.");
       }
