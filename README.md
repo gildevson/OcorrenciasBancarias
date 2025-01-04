@@ -1,33 +1,37 @@
-# Documentação do Sistema de Ocorrências Bancárias
+# **Documentação do Sistema de Ocorrências Bancárias**
 
-## Visão Geral
+## **Visão Geral**
 
-![Imagem do Sistema]([./image.png](https://github.com/gildevson/OcorrenciasBancarias/blob/main/src/components/Header/Layouts.png))
+![Imagem do Sistema](https://github.com/gildevson/OcorrenciasBancarias/blob/main/src/components/Header/Layouts.png)
 
-O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. O sistema também permite a exibição de comandos e layouts bancários.
+O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. Além disso, o sistema permite a exibição de comandos e layouts bancários.
 
 ---
 
-## Funcionalidades
+## **Funcionalidades**
 
-### Tela Principal
+### **Tela Principal**
 A tela principal do sistema oferece as seguintes funcionalidades:
-- **Consultar Ocorrências**: Escolha o banco, código e motivo para buscar as informações diretamente no JSON.
-- **Adicionar Nova Ocorrência**: Insira novas ocorrências no arquivo JSON por meio de um formulário.
-- **Ver Todas as Ocorrências**: Liste todas as ocorrências já cadastradas.
-- **Exibir Comandos Bancários**: Visualize comandos bancários de cada instituição.
 
-### Navegação Simples
-- Menu superior com opções de **Layout**, **Funcionalidades** e **Sobre**.
-- Botões de ação acessíveis e intuitivos.
+- **Consultar Ocorrências**: Permite selecionar o banco, código e motivo para buscar as informações diretamente no arquivo JSON.
+- **Adicionar Nova Ocorrência**: Possibilita a inserção de novas ocorrências no arquivo JSON por meio de um formulário.
+- **Ver Todas as Ocorrências**: Exibe uma lista com todas as ocorrências cadastradas.
+- **Exibir Comandos Bancários**: Apresenta comandos bancários associados a cada instituição financeira.
+
+### **Navegação Simples**
+- **Menu Superior**:
+  - **Layout**: Acesso aos layouts bancários.
+  - **Funcionalidades**: Exploração das ferramentas disponíveis no sistema.
+  - **Sobre**: Informações sobre o sistema.
+- Botões de ação acessíveis e intuitivos para facilitar a interação.
 
 ---
 
-## Estrutura dos Dados (JSON)
+## **Estrutura dos Dados (JSON)**
 
-As ocorrências são armazenadas em um arquivo JSON. Abaixo está a estrutura do arquivo:
+As ocorrências bancárias são armazenadas em um arquivo JSON, que segue o formato descrito abaixo:
 
-### Exemplo de Arquivo JSON
+### **Exemplo de Estrutura do Arquivo JSON**
 ```json
 {
     "02-00": "Entrada Confirmada",
