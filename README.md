@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-![Imagem do Sistema](./image.png)
+![Imagem do Sistema]([./image.png](https://github.com/gildevson/OcorrenciasBancarias/blob/main/src/components/Header/Layouts.png))
 
 O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. O sistema também permite a exibição de comandos e layouts bancários.
 
