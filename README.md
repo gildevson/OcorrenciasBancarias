@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Documentação do Sistema de Ocorrências Bancárias
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição Geral
 
-## Available Scripts
+Este sistema foi desenvolvido para facilitar a visualização e análise de ocorrências bancárias, além de exibir os layouts de cada banco de forma organizada. Ele permite que usuários acessem informações detalhadas sobre cada ocorrência e os padrões exigidos pelos diferentes bancos.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **Cadastro de Ocorrências**
+- Inserção de novas ocorrências no sistema, com informações detalhadas.
+- Classificação das ocorrências por tipo, data e banco associado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. **Consulta de Ocorrências**
+- Busca por ocorrências específicas utilizando filtros como:
+  - Nome do banco
+  - Tipo de ocorrência
+  - Data
 
-### `npm test`
+### 3. **Exibição de Layouts de Bancos**
+- Visualização de layouts detalhados para cada banco.
+- Comparação entre layouts de diferentes bancos para análise de padrões.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. **Relatórios**
+- Geração de relatórios mensais sobre:
+  - Ocorrências registradas por banco.
+  - Tipos de ocorrências mais frequentes.
+- Exportação em formatos PDF ou Excel.
 
-### `npm run build`
+### 5. **Controle de Acesso**
+- Sistema de login com autenticação de usuários.
+- Permissões configuráveis:
+  - Administradores: Acesso total ao sistema.
+  - Usuários: Acesso somente a consultas e relatórios.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Frontend**
+- **React.js**: Para criar uma interface de usuário dinâmica e responsiva.
+- **Bootstrap**: Para estilização dos componentes.
 
-### `npm run eject`
+### **Backend**
+- **Node.js**: Para criação de APIs e lógica de negócios.
+- **Express**: Framework para gerenciar rotas e middlewares.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Banco de Dados**
+- **SQL Server**: Para armazenamento e gerenciamento de dados bancários.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Estrutura do Sistema
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Tabelas no Banco de Dados**
+#### Tabela: `Ocorrencias`
+| Campo           | Tipo         | Descrição                             |
+|------------------|--------------|---------------------------------------|
+| `id`            | INT (PK)     | Identificador único da ocorrência.    |
+| `banco`         | VARCHAR(100) | Nome do banco relacionado.            |
+| `tipo`          | VARCHAR(100) | Tipo da ocorrência.                   |
+| `data`          | DATE         | Data da ocorrência.                   |
+| `descricao`     | TEXT         | Descrição detalhada da ocorrência.    |
 
-## Learn More
+#### Tabela: `Layouts`
+| Campo           | Tipo         | Descrição                              |
+|------------------|--------------|----------------------------------------|
+| `id`            | INT (PK)     | Identificador único do layout.         |
+| `banco`         | VARCHAR(100) | Nome do banco associado.               |
+| `arquivo_layout`| TEXT         | Caminho ou conteúdo do arquivo layout. |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Fluxo de Navegação
 
-### Code Splitting
+1. **Login**
+   - Usuário faz login para acessar o sistema.
+2. **Dashboard**
+   - Exibição de estatísticas gerais e resumo de ocorrências.
+3. **Ocorrências**
+   - Listagem de todas as ocorrências com opções de filtro.
+   - Opção de adicionar, editar ou excluir ocorrências.
+4. **Layouts**
+   - Exibição de layouts por banco.
+   - Download de layouts em formatos compatíveis.
+5. **Relatórios**
+   - Geração de relatórios com base em filtros personalizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Rotas da API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Autenticação**
+- `POST /api/login`: Autenticação do usuário.
 
-### Making a Progressive Web App
+### **Ocorrências**
+- `GET /api/ocorrencias`: Listar todas as ocorrências.
+- `POST /api/ocorrencias`: Criar uma nova ocorrência.
+- `PUT /api/ocorrencias/:id`: Atualizar uma ocorrência.
+- `DELETE /api/ocorrencias/:id`: Excluir uma ocorrência.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Layouts**
+- `GET /api/layouts`: Listar layouts disponíveis.
+- `POST /api/layouts`: Adicionar um novo layout.
+- `GET /api/layouts/:id`: Visualizar um layout específico.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Como Usar
 
-### Deployment
+1. Faça o login utilizando suas credenciais.
+2. Acesse o menu principal para escolher entre:
+   - **Visualizar Ocorrências**
+   - **Visualizar Layouts**
+   - **Gerar Relatórios**
+3. Utilize os filtros para refinar as buscas conforme necessário.
+4. Para administradores, utilize as funções de adicionar ou editar dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Versão Atual (1.0)**
+- Cadastro e consulta de ocorrências.
+- Visualização de layouts.
+
+### **Planejado para Versão 2.0**
+- Integração com APIs de bancos para atualizações automáticas de layouts.
+- Sistema de notificações sobre novas ocorrências.
+
+---
+
+## Contato
+
+Para dúvidas ou suporte, entre em contato:
+- **Desenvolvedor:** Gilson Fonseca
+- **Email:** gilsonfonseca92@gmail.com
+- **GitHub:** [gildevson](https://github.com/gildevson)
