@@ -6,6 +6,8 @@
 
 O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. Além disso, o sistema permite a exibição de comandos e layouts bancários.
 
+- Link do Backend: [Acesse o Repositório do Backend](https://github.com/gildevson/OcorrenciasBancariasBackend.git)
+
 ---
 
 ## **Funcionalidades**
