@@ -4,76 +4,46 @@
 
 ![Imagem do Sistema](./image.png)
 
-O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização e análise de ocorrências bancárias, além de exibir os layouts de cada banco de forma organizada. Ele permite que usuários acessem informações detalhadas sobre cada ocorrência e os padrões exigidos pelos diferentes bancos.
+O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. O sistema também permite a exibição de comandos e layouts bancários.
 
 ---
 
 ## Funcionalidades
 
 ### Tela Principal
-A tela principal do sistema permite as seguintes funcionalidades:
-
-- **Consultar Ocorrências**: Escolha o banco desejado, informe o código e o motivo para obter os detalhes das ocorrências bancárias.
-- **Adicionar Nova Ocorrência**: Acesse o formulário para inserir novas ocorrências no sistema.
-- **Ver Todas as Ocorrências**: Liste todas as ocorrências registradas no sistema.
-- **Exibir Comandos Bancários**: Visualize comandos bancários específicos de cada instituição financeira.
+A tela principal do sistema oferece as seguintes funcionalidades:
+- **Consultar Ocorrências**: Escolha o banco, código e motivo para buscar as informações diretamente no JSON.
+- **Adicionar Nova Ocorrência**: Insira novas ocorrências no arquivo JSON por meio de um formulário.
+- **Ver Todas as Ocorrências**: Liste todas as ocorrências já cadastradas.
+- **Exibir Comandos Bancários**: Visualize comandos bancários de cada instituição.
 
 ### Navegação Simples
-- Botões de ação, como "Consultar Ocorrência", estão organizados de forma clara e acessível.
-- Um menu superior oferece acesso às páginas de **Layout**, **Funcionalidades** e **Sobre**.
+- Menu superior com opções de **Layout**, **Funcionalidades** e **Sobre**.
+- Botões de ação acessíveis e intuitivos.
 
 ---
 
-## Tecnologias Utilizadas
+## Estrutura dos Dados (JSON)
 
-- **Frontend**: React.js
-- **Estilo**: Bootstrap
-- **Backend**: Node.js
-- **Banco de Dados**: SQL Server
+As ocorrências são armazenadas em um arquivo JSON. Abaixo está a estrutura do arquivo:
 
----
-
-## Fluxo de Navegação
-
-1. **Tela Inicial**
-   - Selecione o banco e insira os dados necessários para realizar uma consulta de ocorrência.
-2. **Adicionar Ocorrência**
-   - Clique no botão "Adicionar Nova Ocorrência" para acessar o formulário.
-3. **Visualizar Todas as Ocorrências**
-   - Use o botão "Ver Todas as Ocorrências" para listar todos os registros disponíveis.
-4. **Exibir Comandos Bancários**
-   - Clique no botão "Exibir Comandos Bancários" para obter informações específicas de cada banco.
-
----
-
-## Estrutura do Banco de Dados
-
-### **Tabela: Ocorrências**
-| Campo       | Tipo         | Descrição                             |
-|-------------|--------------|---------------------------------------|
-| `id`        | INT (PK)     | Identificador único da ocorrência.    |
-| `banco`     | VARCHAR(100) | Nome do banco relacionado.            |
-| `tipo`      | VARCHAR(100) | Tipo da ocorrência.                   |
-| `data`      | DATE         | Data da ocorrência.                   |
-| `descricao` | TEXT         | Descrição detalhada da ocorrência.    |
-
----
-
-## Rotas da API
-
-### **Autenticação**
-- `POST /api/login`: Autenticação do usuário.
-
-### **Ocorrências**
-- `GET /api/ocorrencias`: Listar todas as ocorrências.
-- `POST /api/ocorrencias`: Criar uma nova ocorrência.
-- `PUT /api/ocorrencias/:id`: Atualizar uma ocorrência existente.
-- `DELETE /api/ocorrencias/:id`: Excluir uma ocorrência.
-
----
-
-## Contato
-
-- **Desenvolvedor:** Gilson Fonseca  
-- **Email:** [gilsonfonseca92@gmail.com](mailto:gilsonfonseca92@gmail.com)  
-- **GitHub:** [gildevson](https://github.com/gildevson)
+### Exemplo de Arquivo JSON
+```json
+{
+  "ocorrencias": [
+    {
+      "id": 1,
+      "banco": "Bradesco",
+      "codigo": "02",
+      "motivo": "00",
+      "descricao": "Ocorrência relacionada ao código 02 do banco Bradesco."
+    },
+    {
+      "id": 2,
+      "banco": "Itaú",
+      "codigo": "04",
+      "motivo": "12",
+      "descricao": "Ocorrência de código 04 do banco Itaú com motivo 12."
+    }
+  ]
+}
