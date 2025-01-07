@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2023 Todos os direitos reservados | <strong>Gildevson</strong></p>
+        <p>© 2025 Todos os direitos reservados | <strong>Gildevson</strong></p>
         <p>
           <a href="#campanha">Informações de campanha</a> |{" "}
           <a href="#privacidade">Privacidade e Política</a> |{" "}
