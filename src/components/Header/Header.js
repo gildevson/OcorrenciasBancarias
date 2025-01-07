@@ -155,6 +155,20 @@ const Header = () => {
                     </a>
                   </td>
                 </tr>
+                <tr>
+                  <td>Banco Sicredi</td>
+                  <td>748</td>
+                  <td>CNAB 240</td>
+                  <td>
+                    <a
+                      href="https://www.sicredi.com.br/media/produtos/filer_public/2024/02/15/pagamento-a-fornecedores-layout-cnab-240.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
 
               </tbody>
             </table>
