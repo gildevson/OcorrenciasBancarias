@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# **Documentação do Sistema de Ocorrências Bancárias**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Visão Geral**
 
-## Available Scripts
+![Imagem do Sistema](https://github.com/gildevson/OcorrenciasBancarias/blob/main/src/components/Header/Layouts.png)
 
-In the project directory, you can run:
+O **Sistema de Ocorrências Bancárias** foi desenvolvido para facilitar a visualização, consulta e gerenciamento de ocorrências bancárias, utilizando um arquivo JSON como base de dados. Além disso, o sistema permite a exibição de comandos e layouts bancários.
 
-### `npm start`
+- Link do Backend: [Acesse o Repositório do Backend](https://github.com/gildevson/OcorrenciasBancariasBackend.git)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Funcionalidades**
 
-### `npm test`
+### **Tela Principal**
+A tela principal do sistema oferece as seguintes funcionalidades:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Consultar Ocorrências**: Permite selecionar o banco, código e motivo para buscar as informações diretamente no arquivo JSON.
+- **Adicionar Nova Ocorrência**: Possibilita a inserção de novas ocorrências no arquivo JSON por meio de um formulário.
+- **Ver Todas as Ocorrências**: Exibe uma lista com todas as ocorrências cadastradas.
+- **Exibir Comandos Bancários**: Apresenta comandos bancários associados a cada instituição financeira.
 
-### `npm run build`
+### **Navegação Simples**
+- **Menu Superior**:
+  - **Layout**: Acesso aos layouts bancários.
+  - **Funcionalidades**: Exploração das ferramentas disponíveis no sistema.
+  - **Sobre**: Informações sobre o sistema.
+- Botões de ação acessíveis e intuitivos para facilitar a interação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Estrutura dos Dados (JSON)**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As ocorrências bancárias são armazenadas em um arquivo JSON, que segue o formato descrito abaixo:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Exemplo de Estrutura do Arquivo JSON**
+```json
+{
+    "02-00": "Entrada Confirmada",
+    "03-08": "Entrada Rejeitada - Vencimento não validado",
+    "03-12": "Entrada Rejeitada - Ocorrência não cadastrada",
+    "03-13": "Entrada Rejeitada - CEP, endereço ou praça não atendida",
+    "03-14": "Entrada Rejeitada - Agência cobradora não atendida",
+    "03-15": "Entrada Rejeitada - Título duplicado",
+    "03-16": "Entrada Rejeitada - Sacado com nome, CPF/CNPJ inválidos",
+    "03-17": "Entrada Rejeitada - Erro dígito nosso número",
+    "03-18": "Entrada Rejeitada - Título vencido",
+    "03-19": "Entrada Rejeitada - CEP não cobrado pelo banco correspondente",
+    "03-99": "Entrada Rejeitada - Título rejeitado pelo banco",
+    "04-00": "Transferência de Carteira - Entrada",
+    "05-00": "Transferência de Carteira - Baixa",
+    "06-00": "Liquidação Normal",
+    "07-00": "Liquidação Por Conta",
+    "08-00": "Baixado Por Saldo",
+    "09-00": "Baixado Automaticamente",
+    "10-00": "Baixado Conforme Instruções",
+    "11-00": "Em SER (Posição em Aberto)",
+    "12-00": "Abatimento Concedido",
+    "13-00": "Abatimento Cancelado",
+    "14-00": "Vencimento Alterado",
+    "15-00": "Liquidação em Cartório",
+    "16-00": "Devolução do Cartório",
+    "17-00": "Confirmação Envio Para Cartório",
+    "18-00": "Título Não Processado",
+    "19-00": "Baixa Por Crédito Manual"
+}
