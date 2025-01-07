@@ -17,7 +17,8 @@ const ConsultarAdicionarOcorrencia = () => {
     "LiveBank",
     "BancoDoBrasil",
     "BancoBic",
-    "BancoBtg"
+    "BancoBtg",
+    "Sicredi"
   ];
 
   const [bancoConsulta, setBancoConsulta] = useState(bancosDisponiveis[0]);
