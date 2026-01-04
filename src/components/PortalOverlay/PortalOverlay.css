@@ -1,0 +1,206 @@
+.po-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: grid;
+  place-items: center;
+
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+
+  animation: poFade 160ms ease-out;
+}
+
+@keyframes poFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.po-card {
+  position: relative;
+  overflow: hidden;
+
+  background: #fff;
+  border-radius: 20px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transform-origin: center;
+  animation: poZoom 180ms ease-out;
+}
+
+@keyframes poZoom {
+  from { transform: scale(0.98); opacity: 0.65; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* -----------------------
+   TAMANHOS (1 só lugar)
+------------------------ */
+
+.po-size-sm { width: min(520px, 92vw); }
+.po-size-md { width: min(820px, 92vw); }
+.po-size-lg { width: min(1000px, 92vw); }
+.po-size-xl { width: min(1400px, 94vw); }
+
+/* Altura da mídia por tamanho (responsiva) */
+.po-size-sm .po-gif { height: clamp(220px, 24vh, 320px); }
+.po-size-md .po-gif { height: clamp(260px, 32vh, 420px); }
+.po-size-lg .po-gif { height: clamp(280px, 38vh, 560px); }
+.po-size-xl .po-gif { height: clamp(320px, 60vh, 720px); }
+
+/* -----------------------
+   MÍDIA / IMAGEM
+------------------------ */
+
+.po-media {
+  width: 100%;
+  background: #f8fafc;
+}
+
+.po-gif {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* visual premium */
+}
+
+/* Se preferir mostrar a imagem inteira, troque cover por contain */
+.po-gif--contain {
+  object-fit: contain;
+  background: #f8fafc;
+}
+
+/* -----------------------
+   CONTEÚDO
+------------------------ */
+
+.po-content {
+  padding: 22px 24px 24px;
+  text-align: center;
+}
+
+.po-title {
+  margin: 10px 0 8px;
+  font-weight: 900;
+  color: #0f172a;
+
+  font-size: clamp(20px, 2.2vw, 34px);
+  letter-spacing: 0.2px;
+}
+
+.po-text {
+  margin: 0 auto 18px;
+  max-width: 860px;
+
+  color: #475569;
+  line-height: 1.5;
+
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* -----------------------
+   BOTÕES
+------------------------ */
+
+.po-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.po-btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 120ms ease, filter 120ms ease, background 120ms ease;
+  user-select: none;
+}
+
+.po-btn:active {
+  transform: translateY(1px);
+}
+
+.po-primary {
+  background: #0b74ff;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(11, 116, 255, 0.25);
+}
+
+.po-primary:hover {
+  filter: brightness(1.05);
+}
+
+.po-ghost {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #e2e8f0;
+}
+
+.po-ghost:hover {
+  background: #eaf0f6;
+}
+
+/* -----------------------
+   BOTÃO FECHAR
+------------------------ */
+
+.po-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+
+  display: grid;
+  place-items: center;
+  z-index: 10;
+
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.po-close:hover {
+  background: #ffffff;
+  transform: scale(1.04);
+}
+
+/* -----------------------
+   MOBILE
+------------------------ */
+
+@media (max-width: 560px) {
+  .po-content {
+    padding: 18px 16px 18px;
+  }
+
+  .po-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .po-btn {
+    width: 100%;
+  }
+}
